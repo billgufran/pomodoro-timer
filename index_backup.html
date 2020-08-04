@@ -1,0 +1,48 @@
+<!-- To Do
+[] Use flexbox for layout
+[] Align every components
+[] Add modal
+[] Impliment alarm sound -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="assets/style/style_backup.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="grid-container">
+    <header>
+      <h1>Pomodoro Timer</h1>
+      <nav>
+        <button class="button embossed-button">What is this?</button>
+        <button class="button embossed-button">How to use?</button>
+        <button class="button embossed-button">About me</button>
+      </nav>
+    </header>
+    <main>
+      <div id="pomodoro-timer" class="timer">
+        <div id="pomodoro-timer__display" class="time">25:00</div>
+      </div>
+      <div class="mode">
+        <button id="pomodoro-mode__session" class="button button-active floating-button">Session</button>
+        <button id="pomodoro-mode__short-break" class="button floating-button">Short Break</button>
+        <button id="pomodoro-mode__long-break" class="button floating-button">Long Break</button>
+      </div>
+      <div id="pomodoro-actions" class="actions">
+        <button id="pomodoro-actions__start" class="button embossed-button">Start</button>
+        <button id="pomodoro-actions__pause" class="button embossed-button">Pause</button>
+        <button id="pomodoro-actions__stop" class="button embossed-button">Stop</button>
+      </div>
+    </main>
+    <footer>This is a footer</footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!-- To Do
+[x] Use flexbox for layout
+[] Add modal
+[] Combine pause and play buttons
+[] Add button focus effect
+[] Align every components
+[] Impliment alarm sound -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="assets/style/style.css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="body-container" class="aligner">
+    <div class="flex-container">
+      <header>
+        <h1><span class="gradient-text" style="font-weight: bolder;">Pomodoro</span> Timer</h1>
+        <nav>
+          <button class="button embossed-button">What is this?</button>
+          <button class="button embossed-button">How to use?</button>
+          <button class="button embossed-button">About me</button>
+        </nav>
+      </header>
+      <main>
+        <div id="main-container">
+          <div id="pomodoro-mode" class="pomodoro-mode flex-space-around">
+            <button id="pomodoro-mode__session" class="button mode-active floating-button">Session</button>
+            <button id="pomodoro-mode__short-break" class="button floating-button">Short Break</button>
+            <button id="pomodoro-mode__long-break" class="button floating-button">Long Break</button>
+          </div>
+          <div id="pomodoro-timer" class="pomodoro-timer">
+            <div id="pomodoro-timer__display" class="display">25:00</div>
+          </div>
+          <div id="pomodoro-actions" class="pomodoro-actions flex-space-around">
+            <button id="pomodoro-actions__start" class="button embossed-button">
+              <span class="material-icons-outlined">play_arrow</span>
+            </button>
+            <button id="pomodoro-actions__pause" class="button embossed-button">
+              <span class="material-icons-outlined">pause_circle_outline</span>
+              </i></button>
+            <button id="pomodoro-actions__stop" class="button embossed-button">
+              <span class="material-icons-outlined">stop</span>
+            </button>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div id="footer-message">Made with 😠 by <a>billgufran</a></div>
+      </footer>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
