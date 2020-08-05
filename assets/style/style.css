@@ -22,6 +22,7 @@ body {
   width: 90vh;
   border-radius: 10px;
   background: whitesmoke;
+  justify-content: center;
 }
 
 header {
@@ -41,13 +42,19 @@ header {
     font-size: 35px;
   }
 
+  h2 {
+    font-weight: bolder;
+    font-size: 33px;
+    margin-top: 30px;
+  }
+
   nav {
     align-items: flex-end;
     margin: auto 20px;
   }
 
 main {
-  flex: 0 1 75%;
+  flex: 0 1 65%;
 
   display: flex;
   flex-flow: column nowrap;
@@ -78,20 +85,66 @@ footer {
     align-items: flex-start;
   }
 
-/* modal */
-/* The Modal (background) */
+/* ========================== */
+/* Shadows */
+.effect1 {
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;}
+
+.shadow2
+{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.shadow2:before, .shadow2:after
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.shadow2:after
+{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+
+
+/* ========================== */
+/* Modal */
+/* Container */
 .modal {
-  display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
+  width: 100%; 
+  height: 100%;
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(80, 97, 114); /* Fallback color */
+  background-color: rgba(80, 97, 114, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -99,35 +152,40 @@ footer {
   background-color: #fefefe;
   margin: auto;
   padding: 15px;
-  border: 1px solid #888;
   width: 45%;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
 }
 
-.modal-content #what-is__content {
+.modal-content div {
   padding: 50px 25px;
   line-height: 150%;
+  font-size: 16;
 }
 
-/* .modal-content span {
-  float: right;
-  padding: 10px;
-} */
-
 /* The Close Button */
-.close {
+.close-modal {
   color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close-modal:hover,
+.close-modal:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
 
+
+/* ========================== */
 /* Buttons */
 .button {
   margin: 10px;
@@ -190,6 +248,8 @@ button:focus {
     margin: 0;
   }
 
+
+/* ========================== */
 /* Text style */
 .gradient-text {
   /* Fallback: Set a background color. */
@@ -199,7 +259,7 @@ button:focus {
    background-image: linear-gradient(
         45deg,
         #CA4246 16.666%, 
-        #CA4246 16.666%, 
+        #ca4246 16.666%, 
         #ca5009 33.333%, 
         #E16541 33.333%, 
         #E16541 50%, 
@@ -221,17 +281,14 @@ button:focus {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent; 
   
-  
   /* Animate the text when loading the element. */
     /* This animates it on page load and when hovering out. */
     animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
-
 }
 
 .gradient-text:hover{
     animation: rainbow-text-simple-animation 0.5s ease-in forwards;
 }
-
 
 /* Move the background and make it smaller. */
 /* Animation shown when entering the page and after the hover animation. */
@@ -261,7 +318,7 @@ button:focus {
     }
 }
 
-
+/* ========================== */
 /* Positioning */
 #main-container {
   display: flex;
@@ -291,3 +348,13 @@ button:focus {
 .aligner-item--bottom {
   align-self: flex-end;
 }
+
+/* ========================== */
+/* Display */
+.visible {
+  display: block;
+} 
+
+.hidden {
+  display: none;
+} 
