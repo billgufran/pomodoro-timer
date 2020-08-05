@@ -38,7 +38,7 @@ header {
   h1 {
     margin: auto 30px;
     align-items: flex-start;
-    font-family: 'Raleway', Georgia, Times, serif;
+    font-family: 'rawline', 'Segoe-UI', serif;
     font-size: 35px;
   }
 
@@ -61,10 +61,13 @@ main {
   background: rgb(218, 212, 212);
 }
 
+
+
   .display {
     font-size: 120px;
-    font-family: 'Raleway', Georgia, Times, serif;
+    font-family: 'rawline', 'Segoe-UI', serif;
     font-weight: 600;
+    font-style: normal;
   }
 
   #pomodoro-actions span {
@@ -133,6 +136,8 @@ footer {
 
 /* ========================== */
 /* Modal */
+
+/* Animation */
 .modal-zoom-in {
   top: 50%;
   left: 50%;
@@ -209,7 +214,7 @@ footer {
   font-size: 16;
 }
 
-/* The Close Button */
+/* Close button */
 .close-modal {
   color: #aaaaaa;
   float: right;
@@ -236,7 +241,6 @@ footer {
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
-  /* display: inline-block; */
 }
 
 .floating-button {
@@ -286,6 +290,10 @@ button:focus {
   /* Navigation buttons */
   nav .button {
     margin: 0;
+  }
+
+  #pomodoro-mode button {
+    margin: 10px 1px;
   }
 
 
