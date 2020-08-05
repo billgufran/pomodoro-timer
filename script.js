@@ -2,13 +2,9 @@ const whatIs = document.getElementById('what-is');
 const howTo = document.getElementById('how-to');
 const aboutMe = document.getElementById('about-me');
 
-const startButton = document.getElementById('pomodoro-actions__start');
-const pauseButton = document.getElementById('pomodoro-actions__pause');
+const startPauseButton = document.getElementById('pomodoro-actions__start-pause');
 const stopButton = document.getElementById('pomodoro-actions__stop');
 const display = document.getElementById('pomodoro-timer__display');
-
-var modal = document.getElementById("modals");
-var closeButton = document.getElementsByClassName("close")[0];
 
 const modeSession = document.getElementById('pomodoro-mode__session');
 const modeShortBreak = document.getElementById('pomodoro-mode__short-break');
@@ -28,17 +24,17 @@ let longBreakDuration = 900;
 
 
 const currentMode = (modeIs = 'session') => {
-    if (modeIs == 'session'){
+    if (modeIs == 'session') {
         mode = modeIs;
         currentTimeLeft = sessionDuration;
         display.innerText = '25:00'
     }
-    else if (modeIs == 'short break'){
+    else if (modeIs == 'short break') {
         mode = modeIs;
         currentTimeLeft = shortBreakDuration;
         display.innerText = '05:00'
     }
-    else if (modeIs == 'long break'){
+    else if (modeIs == 'long break') {
         mode = modeIs;
         currentTimeLeft = longBreakDuration;
         display.innerText = '15:00'
@@ -54,7 +50,7 @@ const stopClock = () => {
     currentMode(mode);
     // update the timer displayed
     displayCurrentTimeLeftInSession();
-  }
+}
 
 const toggleClock = (reset) => {
     if (reset) {
@@ -95,19 +91,19 @@ const displayCurrentTimeLeftInSession = () => {
 
 // ============================================================
 // Change button color on click
-$('#pomodoro-mode__session').click( function(){
+$('#pomodoro-mode__session').click(function () {
     $('#pomodoro-mode__session').addClass('mode-active');
     $('#pomodoro-mode__short-break').removeClass('mode-active');
     $('#pomodoro-mode__long-break').removeClass('mode-active');
 })
 
-$('#pomodoro-mode__short-break').click( function(){
+$('#pomodoro-mode__short-break').click(function () {
     $('#pomodoro-mode__short-break').addClass('mode-active');
     $('#pomodoro-mode__session').removeClass('mode-active');
     $('#pomodoro-mode__long-break').removeClass('mode-active');
 })
 
-$('#pomodoro-mode__long-break').click( function(){
+$('#pomodoro-mode__long-break').click(function () {
     $('#pomodoro-mode__long-break').addClass('mode-active');
     $('#pomodoro-mode__short-break').removeClass('mode-active');
     $('#pomodoro-mode__session').removeClass('mode-active');
@@ -116,37 +112,36 @@ $('#pomodoro-mode__long-break').click( function(){
 
 // ============================================================
 // Modal operation
-    $('nav>button').on('click', function() {
-      $('.modal-background').addClass('show').removeClass('hide');
-      $('#'+$(this).data('modal')).addClass('show').removeClass('hide');
-    });
-    
-    $('.modal-background').on('click', function(e) {
-      e.preventDefault();
-      $(this).removeClass('show').addClass('hide');
-      $('.modal.show').removeClass('show').addClass('hide');
-    });
+$('nav>button').on('click', function () {
+    $('.modal-background').addClass('show').removeClass('hide');
+    $('#' + $(this).data('modal')).addClass('show').removeClass('hide');
+});
 
-    $('.close-modal').on('click', function(e) {
-        e.preventDefault();
-        $('.modal-background').removeClass('show').addClass('hide');
-        $('.modal.show').removeClass('show').addClass('hide');
-      });
-    
-    $('.modal').on('click', function(e) {
-      e.preventDefault();
-    });
+$('.modal-background').on('click', function (e) {
+    e.preventDefault();
+    $(this).removeClass('show').addClass('hide');
+    $('.modal.show').removeClass('show').addClass('hide');
+});
+
+$('.close-modal').on('click', function (e) {
+    e.preventDefault();
+    $('.modal-background').removeClass('show').addClass('hide');
+    $('.modal.show').removeClass('show').addClass('hide');
+});
+
+$('.modal').on('click', function (e) {
+    e.preventDefault();
+});
 
 // ============================================================
 // Actions
-// Start
-startButton.addEventListener('click', () => {
+// Start Pause
+startPauseButton.addEventListener('click', () => {
     toggleClock();
+    startPauseButton.innerText == 'play_arrow' ? startPauseButton.innerHTML = '<span class="material-icons-outlined gradient-text">pause_circle_outline</span>' 
+    : startPauseButton.innerHTML = '<span class="material-icons-outlined gradient-text">play_arrow</span>';
 })
-// Pause
-pauseButton.addEventListener('click', () => {
-    toggleClock();
-})
+
 // Stop
 stopButton.addEventListener('click', () => {
     toggleClock(true);
