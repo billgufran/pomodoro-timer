@@ -116,60 +116,26 @@ $('#pomodoro-mode__long-break').click( function(){
 
 // ============================================================
 // Modal operation
-$('#what-is--button').click( function(){
-    $('#modals').removeClass('hidden');
-    $('#what-is--content').removeClass('hidden');
-})
+    $('nav>button').on('click', function() {
+      $('.modal-background').addClass('show').removeClass('hide');
+      $('#'+$(this).data('modal')).addClass('show').removeClass('hide');
+    });
+    
+    $('.modal-background').on('click', function(e) {
+      e.preventDefault();
+      $(this).removeClass('show').addClass('hide');
+      $('.modal.show').removeClass('show').addClass('hide');
+    });
 
-$('#how-to--button').click( function(){
-    $('#modals').removeClass('hidden');
-    $('#how-to--content').removeClass('hidden');
-})
-
-$('#about-me--button').click( function(){
-    $('#modals').removeClass('hidden');
-    $('#about-me--content').removeClass('hidden');
-})
-
-$('#about-me--button').click( function(){
-    $('#modals').removeClass('hidden');
-    $('#about-me--content').removeClass('hidden');
-})
-
-$('#about-me--button').click( function(){
-    $('#modals').removeClass('hidden');
-    $('#about-me--content').removeClass('hidden');
-})
-
-$('#about-me--button').click( function(){
-    $('#modals').removeClass('hidden');
-    $('#about-me--content').removeClass('hidden');
-})
-
-$('.close-modal').click( function(){
-    $('#modals').addClass('hidden');
-    $('#what-is--content').addClass('hidden');
-    $('#how-to--content').addClass('hidden');
-    $('#about-me--content').addClass('hidden');
-})
-
-$('#modals').click(function () {
-    if (event.target == '#modals') {
-        $('#modals').addClass('hidden');
-        $('#what-is--content').addClass('hidden');
-        $('#how-to--content').addClass('hidden');
-        $('#about-me--content').addClass('hidden');
-    }
-})
-
-// closeButton.addEventListener('click', () => {
-//     modal.style.display = 'none';
-// })
-
-// window.addEventListener('click', () => {
-//     if (event.target == modal) {modal.style.display = 'none'};
-// })
-
+    $('.close-modal').on('click', function(e) {
+        e.preventDefault();
+        $('.modal-background').removeClass('show').addClass('hide');
+        $('.modal.show').removeClass('show').addClass('hide');
+      });
+    
+    $('.modal').on('click', function(e) {
+      e.preventDefault();
+    });
 
 // ============================================================
 // Actions
