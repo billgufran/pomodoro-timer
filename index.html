@@ -30,10 +30,30 @@
       <header>
         <h1><span class="gradient-text" style="font-weight: bolder;">Pomodoro</span> Timer</h1>
         <nav>
-          <button class="button embossed-button">What is this?</button>
-          <button class="button embossed-button">How to use?</button>
-          <button class="button embossed-button">About me</button>
+          <button id="what-is" class="button embossed-button">What is this?</button>
+          <button id="how-to" class="button embossed-button">How to use?</button>
+          <button id="about-me" class="button embossed-button">About me</button>
         </nav>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="material-icons-outlined close">cancel</span>
+            <div id="what-is__content">
+              <p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late
+                1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in
+                length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for
+                'tomato', after the tomato-shaped kitchen timer that Cirillo used as a university student.</p>
+              <p>A goal of the technique is to reduce the impact of internal and external interruptions on focus and
+                flow. A pomodoro is indivisible; when interrupted during a pomodoro, either the other activity must be
+                recorded and postponed (using the <i style="font-style: italic;">inform – negotiate – schedule – call back strategy)</i> or the pomodoro
+                must be abandoned.</p>
+              <p>Source: <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Wikipedia</a></p>
+            </div>
+          </div>
+
+        </div>
       </header>
       <main>
         <div id="main-container">

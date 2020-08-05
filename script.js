@@ -1,7 +1,14 @@
+const whatIs = document.getElementById('what-is');
+const howTo = document.getElementById('how-to');
+const aboutMe = document.getElementById('about-me');
+
 const startButton = document.getElementById('pomodoro-actions__start');
 const pauseButton = document.getElementById('pomodoro-actions__pause');
 const stopButton = document.getElementById('pomodoro-actions__stop');
 const display = document.getElementById('pomodoro-timer__display');
+
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
 
 const modeSession = document.getElementById('pomodoro-mode__session');
 const modeShortBreak = document.getElementById('pomodoro-mode__short-break');
@@ -105,6 +112,18 @@ const displayCurrentTimeLeftInSession = () => {
     display.innerText = result.toString();
 }
 
+// Modal operation
+whatIs.addEventListener('click', () => {
+    modal.style.display = 'block';
+})
+
+span.addEventListener('click', () => {
+    modal.style.display = 'none';
+})
+
+window.addEventListener('click', () => {
+    if (event.target == modal) {modal.style.display = 'none'};
+})
 
 // START
 startButton.addEventListener('click', () => {
