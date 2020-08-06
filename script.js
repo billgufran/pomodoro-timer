@@ -3,7 +3,7 @@ const howTo = document.getElementById('how-to');
 const aboutMe = document.getElementById('about-me');
 
 const startPauseButton = document.getElementById('pomodoro-actions__start-pause');
-const stopButton = document.getElementById('pomodoro-actions__stop');
+const resetButton = document.getElementById('pomodoro-actions__reset');
 const display = document.getElementById('pomodoro-timer__display');
 
 const modeSession = document.getElementById('pomodoro-mode__session');
@@ -22,6 +22,10 @@ let currentTimeLeft = 1500;
 let shortBreakDuration = 300;
 let longBreakDuration = 900;
 
+const togglePlayButton = () => {
+    isClockRunning ? startPauseButton.innerHTML = '<span class="material-icons-round gradient-text">pause</span>' 
+    : startPauseButton.innerHTML = '<span class="material-icons-round gradient-text">play_arrow</span>';
+}
 
 const currentMode = (modeIs = 'session') => {
     if (modeIs == 'session') {
@@ -41,12 +45,14 @@ const currentMode = (modeIs = 'session') => {
     }
 }
 
-const stopClock = () => {
-    // 1) reset the timer we set
+const resetClock = () => {
+    // reset the timer we set
     clearInterval(clockTimer);
-    // 2) update our variable to know that the timer is stopped
+    // update our variable to know that the timer is stopped
     isClockRunning = false;
     // reset the time left in the session to its original state
+    togglePlayButton ();
+    // set the mode
     currentMode(mode);
     // update the timer displayed
     displayCurrentTimeLeftInSession();
@@ -54,8 +60,8 @@ const stopClock = () => {
 
 const toggleClock = (reset) => {
     if (reset) {
-        // STOP THE TIMER
-        stopClock();
+        // Reset THE TIMER
+        resetClock();
     } else {
         if (isClockRunning === true) {
             // PAUSE THE TIMER
@@ -90,7 +96,7 @@ const displayCurrentTimeLeftInSession = () => {
 }
 
 // ============================================================
-// Change button color on click
+// Change session button color on click
 $('#pomodoro-mode__session').click(function () {
     $('#pomodoro-mode__session').addClass('mode-active');
     $('#pomodoro-mode__short-break').removeClass('mode-active');
@@ -143,24 +149,27 @@ $('.modal').on('click', function (e) {
 // Start Pause
 startPauseButton.addEventListener('click', () => {
     toggleClock();
-    startPauseButton.innerText == 'play_arrow' ? startPauseButton.innerHTML = '<span class="material-icons-round gradient-text">pause</span>' 
-    : startPauseButton.innerHTML = '<span class="material-icons-round gradient-text">play_arrow</span>';
+    togglePlayButton ();
+    // startPauseButton.innerText == 'play_arrow' ? startPauseButton.innerHTML = '<span class="material-icons-round gradient-text">pause</span>' 
+    // : startPauseButton.innerHTML = '<span class="material-icons-round gradient-text">play_arrow</span>';
 })
 
-// Stop
-stopButton.addEventListener('click', () => {
+// Reset
+resetButton.addEventListener('click', () => {
     toggleClock(true);
 })
-
 
 // ============================================================
 // Mode selection
 modeSession.addEventListener('click', () => {
     currentMode('session');
+    resetClock();
 });
 modeShortBreak.addEventListener('click', () => {
     currentMode('short break');
+    resetClock();
 });
 modeLongBreak.addEventListener('click', () => {
     currentMode('long break');
+    resetClock();
 });
