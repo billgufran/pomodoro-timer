@@ -117,6 +117,11 @@ $('nav>button').on('click', function () {
     $('#' + $(this).data('modal')).addClass('show').removeClass('hide');
 });
 
+$('a').on('click', function () {
+    $('.modal-background').addClass('show').removeClass('hide');
+    $('#' + $(this).data('modal')).addClass('show').removeClass('hide');
+});
+
 $('.modal-background').on('click', function (e) {
     e.preventDefault();
     $(this).removeClass('show').addClass('hide');
