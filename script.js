@@ -138,8 +138,8 @@ $('.modal').on('click', function (e) {
 // Start Pause
 startPauseButton.addEventListener('click', () => {
     toggleClock();
-    startPauseButton.innerText == 'play_arrow' ? startPauseButton.innerHTML = '<span class="material-icons-outlined gradient-text">pause_circle_outline</span>' 
-    : startPauseButton.innerHTML = '<span class="material-icons-outlined gradient-text">play_arrow</span>';
+    startPauseButton.innerText == 'play_arrow' ? startPauseButton.innerHTML = '<span class="material-icons-round gradient-text">pause</span>' 
+    : startPauseButton.innerHTML = '<span class="material-icons-round gradient-text">play_arrow</span>';
 })
 
 // Stop

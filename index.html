@@ -14,11 +14,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pomodoro Timer</title>
   <link rel="stylesheet" href="assets/style/style.css">
-  <link href="https://cdn.rawgit.com/h-ibaldo/Raleway_Fixed_Numerals/master/css/rawline.css" rel="stylesheet"> 
+  <link href="https://cdn.rawgit.com/h-ibaldo/Raleway_Fixed_Numerals/master/css/rawline.css" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic"
     rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
@@ -28,77 +28,78 @@
       <header>
         <h1><span class="gradient-text" style="font-weight: bolder;">Pomodoro</span> Timer</h1>
         <nav>
-            <button data-modal="modal-what-is" id="what-is--button" class="button embossed-button">What is this?</button>
-            <button data-modal="modal-how-to" id="how-to--button" class="button embossed-button">How to use?</button>
-            <button data-modal="modal-about-me" id="about-me--button" class="button embossed-button">About me</button>
+          <button data-modal="modal-what-is" id="what-is--button" class="button embossed-button">What is this?</button>
+          <button data-modal="modal-how-to" id="how-to--button" class="button embossed-button">How to use?</button>
+          <button data-modal="modal-about-me" id="about-me--button" class="button embossed-button">About me</button>
         </nav>
-        <div class="modal-background"></div>   
+        <div class="modal-background"></div>
         <!-- What is this -->
         <div id="modal-what-is" class="modal modal-zoom-in">
-            <span class="material-icons-outlined close-modal">cancel</span>
-            <div>
-                <p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late
-                    1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in
-                    length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for
-                    'tomato', after the tomato-shaped kitchen timer that Cirillo used as a university student.</p>
-                <p>A goal of the technique is to reduce the impact of internal and external interruptions on focus and
-                    flow. A pomodoro is indivisible; when interrupted during a pomodoro, either the other activity must be
-                    recorded and postponed (using the <i style="font-style: italic;">inform – negotiate – schedule – call
-                        back strategy)</i> or the pomodoro
-                    must be abandoned.</p>
-                <p style="margin-top: 40px;">Source: <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique"
-                        target="_blank" style="color: #a53a37; text-decoration: none;">Wikipedia</a></p>
-            </div>
+          <span class="material-icons-round close-modal">cancel</span>
+          <div>
+            <p>Well it's a pomodor timer app.</p>
+            <p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late
+              1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in
+              length, separated by short breaks. Each interval is known as a pomodoro, from the Italian word for
+              'tomato', after the tomato-shaped kitchen timer that Cirillo used as a university student.</p>
+            <p>A goal of the technique is to reduce the impact of internal and external interruptions on focus and
+              flow. A pomodoro is indivisible; when interrupted during a pomodoro, either the other activity must be
+              recorded and postponed (using the <i style="font-style: italic;">inform – negotiate – schedule – call
+                back strategy)</i> or the pomodoro
+              must be abandoned.</p>
+            <p style="margin-top: 40px;">Source: <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique"
+                target="_blank" style="color: #a53a37; text-decoration: none;">Wikipedia</a></p>
+          </div>
         </div>
         <!-- How to use -->
         <div id="modal-how-to" class="modal modal-zoom-in">
-            <span class="material-icons-outlined close-modal">cancel</span>
-            <div>
-                <p>There are six steps in the original technique:
-                <ol style="line-height: 160%;">
-                    <li>Decide on the task to be done.</li>
-                    <li>Set the pomodoro timer (traditionally to 25 minutes).</li>
-                    <li>Work on the task.</li>
-                    <li>End work when the timer rings and put a checkmark on a piece of paper.</li>
-                    <li>If you have fewer than four checkmarks, take a short break (3–5 minutes) and then return to step 2;
-                        otherwise continue to step 6.</li>
-                    <li>After four pomodoro sessions, take a longer break (15–30 minutes), reset your checkmark count to
-                        zero, then
-                        go to step 1.</li>
-                </ol>
-                <p style="margin-top: 40px;">Source: <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique#Description"
-                        target="_blank" style="color: #a53a37; text-decoration: none;">Wikipedia</a></p>
-            </div>
+          <span class="material-icons-round close-modal">cancel</span>
+          <div>
+            <p>There are six steps in the original technique:
+            <ol style="line-height: 160%;">
+              <li>Decide on the task to be done</li>
+              <li>Set the pomodoro timer (traditionally to 25 minutes)</li>
+              <li>Work on the task</li>
+              <li>End work when the timer rings and put a checkmark on a piece of paper</li>
+              <li>If you have fewer than four checkmarks, take a short break (3–5 minutes) and then return to step 2;
+                otherwise continue to step 6</li>
+              <li>After four pomodoro sessions, take a longer break (15–30 minutes), reset your checkmark count to
+                zero, then
+                go to step 1</li>
+            </ol>
+            <p style="margin-top: 40px;">Source: <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique#Description"
+                target="_blank" style="color: #a53a37; text-decoration: none;">Wikipedia</a></p>
+          </div>
         </div>
         <!-- About me -->
         <div id="modal-about-me" class="modal modal-zoom-in">
-            <span class="material-icons-outlined close-modal">cancel</span>
-            <div>
-                <img src="./assets/images/IMG_20200207_172319-01-01.jpeg" alt="profile-picture" height="180px"
-                    class="shadow2" style="border-radius:50%">
-                <h2>👋 Hey, I'm Bill</h2>
-                <p>Muhammad Fikri Bill Gufran. 21 y.o. self-taught (thank you Dicoding!) and struggling to be developer.
-                    Loves cat and coffee. That's all folks.</p>
-                </aside>
-            </div>
+          <span class="material-icons-round close-modal">cancel</span>
+          <div>
+            <img src="./assets/images/IMG_20200207_172319-01-01.jpeg" alt="profile-picture" height="180px"
+              class="shadow2" style="border-radius:50%">
+            <h2>👋 Hey, I'm Bill</h2>
+            <p>Muhammad Fikri Bill Gufran. 21 y.o. self-taught (thank you Dicoding!) and struggling to be developer.
+              Loves cat and coffee. That's all folks.</p>
+            </aside>
+          </div>
         </div>
-    </header>
+      </header>
       <main>
         <div id="main-container">
-          <div id="pomodoro-mode" class="pomodoro-mode flex-space-around">
+          <div id="pomodoro-mode">
             <button id="pomodoro-mode__session" class="button mode-active floating-button">Session</button>
             <button id="pomodoro-mode__short-break" class="button floating-button">Short Break</button>
             <button id="pomodoro-mode__long-break" class="button floating-button">Long Break</button>
           </div>
-          <div id="pomodoro-timer" class="pomodoro-timer">
+          <div id="pomodoro-timer">
             <div id="pomodoro-timer__display" class="display">25:00</div>
           </div>
-          <div id="pomodoro-actions" class="pomodoro-actions flex-space-around">
+          <div id="pomodoro-actions">
             <button id="pomodoro-actions__start-pause" class="button embossed-button">
-              <span class="material-icons-outlined gradient-text">play_arrow</span>
+              <span class="material-icons-round gradient-text">play_arrow</span>
             </button>
             <button id="pomodoro-actions__stop" class="button embossed-button">
-              <span class="material-icons-outlined gradient-text">stop</span>
+              <span class="material-icons-round gradient-text">refresh</span>
             </button>
           </div>
         </div>
