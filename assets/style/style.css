@@ -43,8 +43,8 @@ header {
 
   h2 {
     font-weight: bolder;
-    font-size: 33px;
-    margin-top: 10%;
+    font-size: 31px;
+    margin-top: 5%;
   }
 
   nav {
@@ -467,7 +467,7 @@ button:focus {
   }
 
   #modal-about-me img {
-    height: 120px;
+    height: 115px;
   }
 }
 
@@ -475,10 +475,6 @@ button:focus {
   .display {
     font-size: 700%;
   }
-}
-
-#modal-about-me img {
-  height: 110px;
 }
 
 .modal div {
