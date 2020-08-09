@@ -1,12 +1,8 @@
 ﻿# pomodoro-timer
+A pomodoro timer web app
+
 
 ### To Do:
-For Dicoding needs
-- Adding modal
-- Adjust margins and paddings
-
-Personal
-- Implement bootstrap
 - Adjustable time right from the time display
 - Add blurred background effect for modal
-- Implement alarm sound
+- Implement alarm sound and notification
